@@ -139,18 +139,18 @@ POWER_DATA read_stpm(void)
 		
 		
 if (iMOM & 0x08000) // positive current
-get_value.iMOM = iMOM & 0x07FFF;
+iMOM = iMOM & 0x07FFF;
 else // negative current
 {
-get_value.iMOM = 0x08000 - iMOM;
-get_value.iMOM = iMOM * (-1);
+iMOM = 0x08000 - iMOM;
+iMOM = iMOM * (-1);
 }
 if ( uMOM & 0x0400) // positive voltage
- get_value.uMOM = (uMOM) & 0x3FF;
+uMOM = (uMOM) & 0x3FF;
 else // negative voltage
 {
- get_value.uMOM = 0x0400 - (uMOM);
- get_value.uMOM =  uMOM * (-1);
+uMOM = 0x0400 - (uMOM);
+uMOM =  uMOM * (-1);
 }		
 		
 
