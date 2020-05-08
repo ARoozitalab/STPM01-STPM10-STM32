@@ -135,6 +135,14 @@ typedef struct
 
   uint32_t type1_energy;                /*type 1 energy */
 
+	
+	uint8_t modsignal;								/*modsignal */ 
+	
+	uint8_t status; 									/*status */ 
+
+		
+	double freq;  										/*freq */
+	
   double uRMS;               				 /*uRMS*/
 
   double uMOM;                        /*uMOM*/
@@ -144,6 +152,8 @@ typedef struct
   double iMOM;           					 /*iMOM */
 	
 	 uint8_t flag;  
+	
+	
 
 }POWER_DATA;
 void delay(uint8_t d);
